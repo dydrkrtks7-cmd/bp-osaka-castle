@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osaka Castle Guide | 오사카 성의 모든 것: 그냥 '멋있다'고 끝내지 마라</title>
+    <meta name="description" content="오사카 성(Osaka Castle)에 대한 가장 직설적인 가이드다. 단순히 '볼거리' 수준이 아니다. 역사, 건축학, 그리고 왜 이 장소가 여전히 중요하게 다뤄져야 하는지에 대한 모든 것을 쏟아낸다. 당신의 관람 기준을 높여줄 것이다. 그냥 찍고 오는 여행자는 여기 주목하라.">
+    <meta name="keywords" content="Osaka castle 안내, 오사카 성 정보, Osaka Castle Guide, 일본 역사 관광, 고전 건축물 투어, 오사카 여행 필수 코스, 브로의 시선으로 보는 오사카성">
+    <meta name="canonical" content="https://yourdomain.com/osaka-castle-guide">
+    <!-- BPAAS 시스템 메타 태그 -->
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-noir-gold">
+    <!-- OG & Twitter Card -->
+    <meta property="og:title" content="Osaka Castle Guide | 오사카 성의 모든 것: 그냥 '멋있다'고 끝내지 마라">
+    <meta property="og:description" content="오사카 성에 대한 가장 직설적인 가이드. 당신의 관람 기준을 높여줄, 브로 같은 시선의 심층 분석이다.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yourdomain.com/osaka-castle-guide">
+    <meta property="og:image" content="[여기에_오사카성_메인이미지_URL]"> 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@YourTwitterHandle">
+
+    <!-- CSS 핵심 스타일 시트 (이전과 동일하게 유지) -->
+    <style>
+        /* --- CSS DNA: Editorial Luxury & Noir-Gold Theme --- */
+        :root {
+            --color-primary: #b8860b; /* Gold/Brass Tone - 짙은 황금색 */
+            --color-secondary: #3d271c; /* Deep Brown/Noir Base Color */
+            --color-text-dark: #1a1a1a;
+            --color-text-light: #f5f5dc; /* Creamy White for contrast */
+            --color-accent-light: #e8d9b4; /* Lighter Gold/Beige */
+            --font-serif-main: 'Georgia', serif;
+            --font-sans-body: 'Helvetica Neue', sans-serif;
+            --spacing-unit: 1rem;
+        }
+
+        /* Global Reset & Typography */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans-body);
+            color: var(--color-text-dark);
+            background-color: #fef8f2; /* Very light cream background */
+            line-height: 1.65;
+        }
+        
+        h1, h2, h3 {
+            font-family: var(--font-serif-main);
+            color: var(--color-secondary);
+            margin-top: calc(2 * var(--spacing-unit));
+            margin-bottom: 0.5rem;
+        }
+
+        h1 { font-size: 3rem; line-height: 1.1; }
+        h2 { font-size: 2.2rem; border-left: 4px solid var(--color-primary); padding-left: 0.75rem; }
+        h3 { font-size: 1.5rem; color: #6a4d3c; }
+
+
+        /* Layout Constraints */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: calc(3 * var(--spacing-unit)) 0;
+        }
+
+        /* Spacing (SPACE: airy) */
+        .section {
+            padding: calc(4 * var(--spacing-unit)) 0;
+            border-bottom: 1px solid rgba(255, 165, 0, 0.1); /* Subtle gold line separation */
+        }
+
+        .section-gap {
+            margin-top: calc(3 * var(--spacing-unit));
+            margin-bottom: calc(3 * var(--spacing-unit));
+        }
+
+        /* Header & Nav Styling (nav-present, hamburger-menu) */
+        header {
+            background-color: var(--color-secondary);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0; /* Adjust padding for header */
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            color: var(--color-text-light);
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px; /* Spacing between nav items */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--color-accent-light);
+            font-weight: bold;
+            transition: color 0.3s, border-bottom 0.3s;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover {
+            color: var(--color-text-light);
+            border-bottom: 2px solid var(--color-primary);
+        }
+        
+        /* Hamburger Menu (Responsive - hidden on desktop) */
+        .hamburger-menu {
+            display: none; /* Hidden by default, shown via JS/CSS media query */
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: var(--color-text-light);
+        }
+
+        /* Content Card Styling (for featured sections) */
+        .content-card {
+            background-color: var(--color-accent-light);
+            border-left: 5px solid var(--color-primary);
+            padding: calc(2 * var(--spacing-unit));
+            margin-bottom: var(--spacing-unit);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .content-card h3 {
+            margin-top: 0;
+        }
+        /* FAQ Styling */
+        .faq-item {
+            border-bottom: 1px dashed rgba(59, 39, 28, 0.2);
+            padding: var(--spacing-unit) 0;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: var(--color-secondary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding-top: 5px;
+            font-size: 0.98rem;
+            color: #4a342a;
+        }
+
+        /* Responsive Breakpoint (768px) */
+        @media (max-width: 1024px) { /* Slightly wider breakpoint for better tablet view */
+             h1 { font-size: 2.5rem; }
+             header .container { padding: 0 calc(1 * var(--spacing-unit)); }
+
+             /* Hamburger Menu Activation */
+             .hamburger-menu {
+                 display: block; /* Show hamburger on smaller screens */
+             }
+             nav ul {
+                 position: absolute;
+                 top: 65px; /* Height of the header bar */
+                 left: 0;
+                 width: 100%;
+                 flex-direction: column;
+                 background-color: rgba(45, 39, 28, 0.95); /* Semi-transparent dark background */
+                 padding: calc(var(--spacing-unit)) 0;
+                 text-align: center;
+             }
+             nav li {
+                width: 100%;
+                border-bottom: 1px solid rgba(232, 217, 180, 0.1); /* Subtle separator */
+            }
+        }
+
+        @media (max-width: 600px) {
+             h1 { font-size: 2rem; }
+             h2 { font-size: 1.8rem; }
+             nav a { padding: 10px 0; display: block; border-bottom: none; }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>[THE GUIDE]</h1>
+            </div>
+            <!-- Hamburger Menu Icon (Visible below 1024px) -->
+            <div class="hamburger-menu" aria-label="메뉴 열기">&#9776;</div>
+            
+            <!-- Primary Navigation Links (nav-present) -->
+            <nav>
+                <ul>
+                    <li><a href="/osaka-castle-guide">Osaka Castle</a></li>
+                    <li><a href="/japan-history-tour">일본 역사 투어</a></li>
+                    <li><a href="/tokyo-essential">도쿄 필수 코스</a></li>
+                    <li><a href="/travel-tips">여행 팁 (Tips)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 메인 콘텐츠 영역 -->
+    <main class="container">
+        
+        <!-- 페이지 타이틀 섹션 -->
+        <div class="section section-gap" style="text-align: center;">
+            <h1>Osaka Castle Guide</h1>
+            <p style="font-size: 1.3rem; color: #6a4d3c; margin-top: 0.5rem;">👊 이 정도는 알아야 '찐'이라고 할 수 있다, Bro.</p>
+        </div>
+
+        <!-- 핵심 소개 및 오피니언 (BOLD VOICE) -->
+        <section class="section section-gap">
+            <h2>🔥 왜 오사카 성을 그냥 지나치면 안 되는가?</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">솔직히 말하자. 많은 여행자들이 '오사카성 봤다!' 하고 사진만 찍고 넘어간다. 하지만 그건 마치 명화 앞에서 스냅샷만 찍고 '어, 멋있다'로 끝내는 것과 같다. 오사카 성은 단순한 포토존이 아니야. 이건 일본의 근현대사를 관통하는 거대한 건축적 선언이고, 전성기 에도 시대의 야망 그 자체거든. 우리가 이 글을 읽는 목적은 딱 하나. 당신의 '관람 수준'을 다음 레벨로 끌어올리는 것. 쫄지 말고 제대로 봐라.</p>
+
+            <!-- 추천 카드: 왜 봐야 하는가? -->
+            <div class="content-card">
+                <h3>🧐 브로의 시선으로 본 필독 포인트</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="margin-bottom: 10px;"><span style="color: var(--color-primary); font-size: 1.2rem;">★</span> **역사의 무게:** 토요토미 히데요시의 야망이 이 벽돌 하나하나에 박혀있다.</li>
+                    <li style="margin-bottom: 10px;"><span style="color: var(--color-primary); font-size: 1.2rem;">★</span> **건축적 정점:** 천수각(Tenshukaku)의 비례감, 미학적인 완벽함은 경이롭다.</li>
+                    <li style="margin-bottom: 0;"><span style="color: var(--color-primary); font-size: 1.2rem;">★</span> **시대적 배경:** 왜 이 시기에 오사카가 '일본의 심장'이었는지 깨닫게 해준다.</li>
+                </ul>
+            </div>
+        </section>
+
+<!-- SEO Visual 2: 정보 Cardless Editorial List -->
+<div class="seo-visual-cards" role="img" aria-label="Osaka castle 안내 정보 — 신뢰할 수 있는 서비스" 
+     style="display:flex;flex-direction:column;gap:0;margin:40px 0;border-top:1px solid #e5e5e0;border-bottom:1px solid #e5e5e0;background:#faf9f6">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:1px solid #e5e5e0;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 01 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">특화</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">Osaka castle 안내</span>
+  </div><div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:1px solid #e5e5e0;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 02 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">다수 실적</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">Osaka castle 안내</span>
+  </div><div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:none;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 03 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">고품질</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">Osaka castle 안내</span>
+  </div>
+</div>
+
+        <!-- 건축 및 역사 상세 분석 (DETAIL) -->
+        <section class="section section-gap">
+            <h2>🏯 건축학적 분해: 천수각, 이딴 걸 어떻게 지었지?</h2>
+            <p style="margin-bottom: 1.5rem;">이 성의 심장부인 천수각(天守閣)을 보라고. 흔히 '일본식 성'이라고 통칭하지만, 오사카 성은 그중에서도 가장 완벽주의적이다. 특히 **화려한 다층 구조와 지붕선의 유려함**을 주목해라. 이 모든 것이 기능성과 미학을 동시에 만족시킨 결과물이라는 걸 느껴야 해.</p>
+            
+            <h3 style="margin-top: 2rem;">🔨 주요 건축 특징 (Checklist)</h3>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="padding: 8px 0; border-bottom: 1px dotted rgba(59, 39, 28, 0.2);"><strong>기단부 (Base):</strong> 단단하고 육중한 안정감. 이건 '이 성은 절대 안 무너진다'는 메시지를 던지는 것 같지 않나?</li>
+                <li style="padding: 8px 0; border-bottom: 1px dotted rgba(59, 39, 28, 0.2);"><strong>본체 (Main Structure):</strong> 기와 지붕의 곡선 처리(Sori). 이 미묘한 곡률이 딱딱함을 부드럽게 만든다.</li>
+                <li style="padding: 8px 0;"><strong>천수각 꼭대기:</strong> 가장 드라마틱한 부분. 화려한 장식과 황금빛 처마가 하늘을 향해 날카롭게 치솟는 느낌. '야망' 그 자체의 시각화다.</li>
+            </ul>
+        </section>
+
+        <!-- 관람 팁 및 실전 가이드 (ACTIONABLE) -->
+        <section class="section section-gap">
+            <h2>🚀 브로를 위한 실전 코스 추천: 뭘 봐야 할지 모르겠다면 이걸 봐라</h2>
+            <p style="margin-bottom: 1.5rem;">시간이 없다? 좋습니다. 시간 없는 것도 '최적화된 선택'이지. 이 루트대로만 돌면, 당신은 그냥 구경꾼이 아니라 건축 분석가 수준의 관람자가 될 거다.</p>
+
+            <!-- 실전 카드 1 -->
+            <div class="content-card">
+                <h3>🧭 1단계: 성곽 외벽 & 해자 (The Perimeter)</h3>
+                <p style="font-size: 0.95rem;">성 전체를 둘러싸고 있는 거대한 방어선(해자 포함). 여기서 '스케일'을 느껴라. 얼마나 많은 노동력과 자원이 투입됐는지 눈으로 확인하는 단계다.</p>
+            </div>
+
+             <!-- 실전 카드 2 -->
+            <div class="content-card">
+                <h3>🏯 2단계: 천수각 내부 (The Core)</h3>
+                <p style="font-size: 0.95rem;">내부에 올라가서, 구조를 내려다봐라. 특히 역사 전시물 코너에서 '전쟁 시뮬레이션' 섹션을 놓치지 마시길. 그때 비로소 이 건물이 왜 방어 시설인지를 이해하게 된다.</p>
+            </div>
+
+             <!-- 실전 카드 3 (추가 필살기) -->
+            <div class="content-card">
+                <h3>📸 3단계: 사진 스팟 (The Vibe Check)</h3>
+                <p style="font-size: 0.95rem;">성 아래 넓은 공원 쪽으로 내려와서, **삼각대 세우고 낮에 찍지 마라.** 해 질 녘(Golden Hour), 성 뒤로 보이는 하늘과 대비되는 그림자를 활용해 '드라마틱한' 사진을 뽑아내야 한다. (이거 안 하면 그냥 평범한 사진임.)</p>
+            </div>
+
+        
+<div class="seo-visual-divider" role="separator" aria-label="Osaka castle 안내 구분선" style="margin:32px 0;text-align:center;color:#e5e5e0;font-size:0.85rem;letter-spacing:0.5em">◆ ◆ ◆</div>
+</section>
+
+        <!-- FAQ 섹션 -->
+        <section class="section section-gap">
+            <h2>❓ 자주 묻는 질문 (FAQ)</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Q. 오사카 성을 볼 때 꼭 봐야 하는 '핵심 포인트' 딱 하나만 고른다면?</div>
+                <span style="font-size: 1.2rem;">&#9658;</span>
+            </div>
+            <div class="faq-answer" style="display: block;">A. 단연코 **천수각의 지붕선과 기단부의 완벽한 조화**다. 사진으로 찍는 것보다, 그 압도적인 크기 앞에서 잠시 숨을 멈추고 바라보는 시간을 가져라. 이게 핵심이야.</div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q. 성곽 자체를 전부 도보로
+</body>
+</html>
