@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title><![CDATA[Osaka Osaka castle 안내]]></title>
-  <link>https://</link>
-  <description><![CDATA[Osaka 정보 관련 최신 뉴스, 서비스 안내, 리얼 후기 정보를 신속하게 전달하는 공식 RSS 피드입니다.]]></description>
-  <language>ko-KR</language>
-  <pubDate>Tue, 26 May 2026 15:38:20 GMT</pubDate>
-  <lastBuildDate>Tue, 26 May 2026 15:38:20 GMT</lastBuildDate>
-  <atom:link href="https:///feed.xml" rel="self" type="application/rss+xml" />
+  <title><![CDATA[정보]]></title>
+  <link>https://dydrkrtks7-cmd.github.io/bp-osaka-castle</link>
+  <description><![CDATA[정보 - Osaka castle 안내 관련 최신 소식 및 가이드]]></description>
+  <language>ko</language>
+  <pubDate>Wed, 10 Jun 2026 02:50:22 GMT</pubDate>
+  <lastBuildDate>Wed, 10 Jun 2026 02:50:22 GMT</lastBuildDate>
+  <atom:link href="https://dydrkrtks7-cmd.github.io/bp-osaka-castle/feed.xml" rel="self" type="application/rss+xml" />
   
     <item>
-      <title><![CDATA[Osaka Osaka castle 안내 - 공식 홈페이지 오픈 안내]]></title>
-      <link>https:///</link>
-      <guid isPermaLink="true">https:///</guid>
-      <description><![CDATA[Osaka 정보 관련 최신 뉴스, 서비스 안내, 리얼 후기 정보를 신속하게 전달하는 공식 RSS 피드입니다.]]></description>
-      <pubDate>Tue, 26 May 2026 15:38:20 GMT</pubDate>
+      <title><![CDATA[창작한 제목]]></title>
+      <link>https://dydrkrtks7-cmd.github.io/bp-osaka-castle/posts/field_note-002-w1zg4s.html</link>
+      <guid isPermaLink="true">https://dydrkrtks7-cmd.github.io/bp-osaka-castle/posts/field_note-002-w1zg4s.html</guid>
+      <description><![CDATA[### 제목: 창작한 제목 #### 포스트 DNA d537f72c 아, 진짜... 룸 단위 서비스업에서 가격대별 원가 구조와 마진율의 실제 분포는 어떻게 결정되는지 알고 싶어. 특히, 월 매출 3000원 찍고도 6개월 만에 폐업한 진짜 원가 구조를 파헤쳐보고 싶다. #]]></description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[Osaka castle 안내 솔직 후기 — 3개월 써본 사람의 리얼 리뷰]]></title>
+      <link>https://dydrkrtks7-cmd.github.io/bp-osaka-castle/posts/review-001-w1zg4s.html</link>
+      <guid isPermaLink="true">https://dydrkrtks7-cmd.github.io/bp-osaka-castle/posts/review-001-w1zg4s.html</guid>
+      <description><![CDATA[### 키워드 컨텍스트데이터 과학자 시점의 MK울트라는 CIA 비밀 프로젝트였다. 스노 Snowden는 NSA 내부고발자였고, 음모론과 실제 사건 사이의 차이는 심각하다. 이 글은 특정 키워드의 구글 트렌드 이상 급등과 실제 사건의 시차 분석을 중심으로 서사를 전개합니]]></description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
     </item>
 </channel>
 </rss>
