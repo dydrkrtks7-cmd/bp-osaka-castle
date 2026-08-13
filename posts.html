@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · osaka-castle</title>
+  <meta name="description" content="osaka-castle에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://osaka-local-info.pbn-builder.xyz/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* --- CSS DNA: Editorial Luxury & Noir-Gold Theme --- */
+ :root {
+ --color-primary: #1a1a1a;
+ --color-secondary: #fafaf5;
+ --color-accent: #c5a880;
+ --font-serif: 'Georgia', 'Times New Roman', serif; /* 대표적인 세리프 폰트 지정 */
+ }
+
+ /* Global Reset & Typography */
+ *, *::before, *::after {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+
+ body {
+ font-family: var(--font-serif);
+ background-color: var(--color-secondary);
+ color: var(--color-primary);
+ line-height: 1.7; /* Generous line spacing */
+ letter-spacing: 0.02em; /* Fine letter-spacing */
+ }
+
+ /* Layout Constraints */
+ .container {
+ max-width: 720px;
+ margin: 0 auto;
+ padding: 0 30px; /* Padding on sides */
+ }
+
+ /* Spacing (SPACE: airy) */
+ .section {
+ padding: 100px 0; /* Vertical padding for sections */
+ gap: 48px; /* Gap between elements within a section */
+ }
+ .section-gap {
+ /* Extra gap between major sections */
+ margin-bottom: 120px; 
+ }
+
+ /* Header & Nav Styling */
+ header {
+ padding: 72px 0; /* Top padding */
+ border-bottom: 3px solid var(--color-accent); /* Fine border */
+ }
+ .nav-menu {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .logo a {
+ font-size: 1.8rem;
+ font-weight: bold;
+ text-decoration: none;
+ color: var(--color-primary);
+ letter-spacing: 0.05em; /* Slightly more aggressive spacing for logo */
+ }
+ nav ul {
+ list-style: none;
+ display: flex;
+ gap: 30px;
+ }
+ nav a {
+ text-decoration: none;
+ color: var(--color-primary);
+ font-size: 1rem;
+ transition: color 0.2s;
+ border-bottom: 1px solid transparent; /* Subtle hover indicator */
+ }
+ nav a:hover {
+ color: var(--color-accent);
+ border-bottom: 1px solid var(--color-accent);
+ }
+
+ /* Hero Section Styling (Dramatic Gradient Overlay) */
+ .hero {
+ text-align: center;
+ padding: 150px 20px; /* Extra vertical padding for drama */
+ background: linear-gradient(180deg, rgba(26, 26, 26, 0.9) 0%, rgba(254, 250, 245, 0.8) 50%, rgba(26, 26, 26, 0.9) 100%);
+ color: var(--color-secondary); /* Text color on dark gradient */
+ }
+ .hero h1 {
+ font-size: 3.8rem;
+ margin-bottom: 15px;
+ text-transform: uppercase;
+ letter-spacing: 0.04em;
+ /* Drop Cap Effect Simulation for H1 */
+ display: inline-block;
+ padding-left: 0.2em;
+ }
+ .hero h1::first-letter {
+ font-size: 5rem; /* Make the first letter huge */
+ float: left;
+ margin-right: 0.1em;
+ line-height: 1;
+ }
+ .hero p {
+ font-size: 1.3rem;
+ max-width: 80%;
+ margin: 0 auto;
+ opacity: 0.9; /* Slightly desaturated for cinematic feel */
+ }
+
+ /* Main Content Styling (Narrative Flow) */
+ main {
+ padding-top: 72px; /* Start content below the header padding */
+ }
+ h2 {
+ font-size: 2.2rem;
+ color: var(--color-accent);
+ margin-bottom: 30px;
+ text-align: center;
+ border-bottom: 1px solid rgba(197, 168, 128, 0.5); /* Fine accent border */
+ padding-bottom: 10px;
+ }
+ p {
+ font-size: 1.1rem;
+ margin-bottom: 24px;
+ text-align: justify; /* Strong justification for narrative flow */
+ }
+
+ /* Specific Section Styling */
+ #info-summary .content-block {
+ padding: 30px;
+ border: 1px solid rgba(26, 26, 26, 0.1); /* Very light border */
+ }
+ #info-summary h3 {
+ font-size: 1.5rem;
+ margin-bottom: 15px;
+ color: var(--color-primary);
+ }
+
+ /* Review Card Styling (No Box Shadow) */
+ .review-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 30px; /* Spacing between cards */
+ }
+ .review-card {
+ padding: 35px;
+ border: 1px solid rgba(197, 168, 128, 0.4); /* Accent border on card */
+ background-color: var(--color-secondary);
+ transition: background-color 0.3s;
+ }
+ .review-card:hover {
+ /* Minimal hover state to maintain editorial feel */
+ background-color: rgba(254, 250, 245, 0.95);
+ }
+ .reviewer-name {
+ font-weight: bold;
+ display: block;
+ margin-bottom: 8px;
+ color: var(--color-primary);
+ font-size: 1.1rem;
+ }
+ .review-date {
+ font-size: 0.9rem;
+ color: #6a6a6a;
+ display: block;
+ margin-bottom: 15px;
+ }
+ .stars {
+ color: gold; /* Gold color for stars */
+ font-size: 1.3rem;
+ line-height: 1;
+ margin-bottom: 15px;
+ }
+ .review-text {
+ font-style: italic;
+ border-left: 3px solid var(--color-accent); /* Accent line beside text */
+ padding-left: 12px;
+ display: block;
+ }
+
+ /* Footer Styling */
+ footer {
+ background-color: var(--color-primary);
+ color: rgba(250, 250, 245, 0.8);
+ padding: 30px 0;
+ text-align: center;
+ border-top: 1px solid var(--color-accent); /* Top border for final separation */
+ }
+ footer p {
+ margin: 0;
+ font-size: 0.9rem;
+ letter-spacing: 0.01em;
+ }
+
+ /* --- Responsive Design (Mobile Adaptation) --- */
+ @media (max-width: 768px) {
+ .container {
+ padding: 0 20px; /* Slightly less padding on small screens */
+ }
+ header {
+ padding: 50px 0;
+ }
+
+ /* Hero Adaptation */
+ .hero h1 {
+ font-size: 3rem;
+ }
+ .hero h1::first-letter {
+ font-size: 4rem;
+ }
+ .hero p {
+ font-size: 1.1rem;
+ max-width: 90%;
+ }
+
+ /* Nav Adaptation (Hamburger Menu) */
+ nav ul {
+ display: none; /* Hide by default on small screen */
+ flex-direction: column;
+ position: absolute;
+ top: 80px; /* Below the header bar height */
+ left: 0;
+ right: 0;
+ background: var(--color-secondary);
+ border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+ padding: 20px 0;
+ }
+ nav ul.active {
+ display: flex; /* Show when active */
+ }
+ nav li {
+ margin: 10px 0;
+ }
+ nav a {
+ display: block; /* Make links fill the width */
+ padding: 10px 30px;
+ }
+
+ /* Hamburger Button Visibility */
+ .menu-toggle {
+ display: block; /* Show toggle on mobile */
+ font-size: 2rem;
+ cursor: pointer;
+ color: var(--color-primary);
+ border: none;
+ background: transparent;
+ padding: 0;
+ }
+ }
+
+ /* Mobile Specific Styling Adjustments */
+ .menu-toggle {
+ display: block; /* Ensure toggle is visible on mobile */
+ margin-right: 15px;
+ }
+ @media (min-width: 769px) {
+ .menu-toggle {
+ display: none; /* Hide toggle on desktop */
+ }
+ }
+
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · osaka-castle">
+  <meta property="og:description" content="osaka-castle에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://osaka-local-info.pbn-builder.xyz/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 34개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-002-w1zg4s.html">Osaka castle 안내</a>
+        <p class="post-item__summary">오사카 성은 일본을 대표하는 역사적인 건축물이자 오사카 지역을 상징하는 거대한 성곽입니다. 과거 일본의 통일 과정에서 중요한 전략적 요충지였던 이 장소는 오늘날 수많은 관광객이 찾는 핵심 명소가 되</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0325.html">Osaka castle 안내를 통해 본 동대문 마사지 풋쌤 동대문점 방문 가이드</a>
+        <p class="post-item__summary">오사카 여행 계획 시 Osaka castle 안내 정보를 확인하는 것만큼이나 지역 내 서비스 업체를 선정할 때도 체계적인 검증 과정이 필요합니다. 특히 동대문 인근에서 피로를 풀기 위해 업체를 찾고</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0326.html">Osaka castle 안내를 참고한 마포/합정 인디 소셜 라운지 가이드 선택 비교</a>
+        <p class="post-item__summary">해외 명소를 방문할 때 Osaka castle 안내 문서를 미리 숙지하면 효율적인 관람이 가능하듯, 마포와 합정 일대에서 프라이빗한 모임을 기획할 때도 명확한 기준이 필요합니다. 대중적인 파티룸과 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0327.html">Osaka castle 안내처럼 정확한 상세 안내 활용법</a>
+        <p class="post-item__summary">낯선 타지를 여행할 때 Osaka castle 안내 정보를 보며 경로를 익히듯, 디지털 환경에서 사이트 건강을 회복하려면 명확한 가이드를 따라야 합니다. 많은 운영자가 사이트 순위 하락을 겪고도 원</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0328.html">Osaka castle 안내와 같은 마포 홍대 로컬 럭셔리 밤문화 가이드 확인 체크리스트</a>
+        <p class="post-item__summary">여행객이 Osaka castle 안내 책자를 손에 들고 동선을 설계하듯, 마포 홍대의 밤문화를 즐기려는 이들도 사전에 장소의 접근성을 면밀히 파악해야 합니다. 밤늦은 시간 이동을 고려하면 대중교통과</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0329.html">Osaka castle 안내를 참고한 마포 럭셔리 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">갑작스러운 기업 연말 행사나 대규모 동창회 계획을 세우다 보면 가장 먼저 고민되는 것이 장소 선정입니다. 마치 Osaka castle 안내를 살피듯 꼼꼼하게 주변 시설의 규모와 서비스 질을 파악하는</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0330.html">Osaka castle 안내를 통한 콘텐츠 급수 정화 정보</a>
+        <p class="post-item__summary">디지털 마케팅 현장에서 많은 이들이 범하는 오해 중 하나는 백링크의 개수가 곧 검색 엔진 순위와 직결된다는 믿음입니다. 마치 Osaka castle 안내를 보고 전체 경로를 이해하듯, 양질의 콘텐츠</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0331.html">Osaka castle 안내 기반의 마포 유흥 투명 정찰제 가격 정보 디렉토리</a>
+        <p class="post-item__summary">안전한 시설 이용, 명확한 비용 산출, 검증된 서비스 품질이라는 세 가지 충족 조건을 나열하며 모임을 시작하는 것은 매우 현명한 접근입니다. Osaka castle 안내가 방문객에게 이동 동선을 명</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0332.html">Osaka castle 안내 및 마포 셔츠룸 리얼 후기 소셜 마케팅 가이드</a>
+        <p class="post-item__summary">업체를 선택할 때 가장 신뢰할 수 있는 지표가 무엇이라고 생각하십니까? 마치 Osaka castle 안내가 수많은 관광객에게 정확한 지침을 제공하듯, 생생한 후기는 예비 방문객에게 귀중한 나침반이 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0333.html">Osaka castle 안내를 참고해 알아보는 마포 셔츠룸 예약 시 눈탱이 피하는 법</a>
+        <p class="post-item__summary">오사카 여행을 준비하는 분들이 Osaka castle 안내 정보를 찾아보듯, 유흥 시설을 이용할 때도 철저한 사전 정보 수집이 필요합니다. 특히 마포 지역에서 밤 문화를 즐기려는 소비자가 피해를 보</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0334.html">Osaka castle 안내를 통해 본 4</a>
+        <p class="post-item__summary">관광객이 Osaka castle 안내 책자를 읽으며 효율적인 동선을 짜듯, 비즈니스 자동화에 관심이 있는 이들도 적절한 학습 경로를 찾아야 합니다. 현대 시장에서는 단순히 교육을 받는 것을 넘어 실</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0335.html">Osaka castle 안내를 활용하여 실패 없는 셔츠룸 예약 절차를 완성하는 방법</a>
+        <p class="post-item__summary">여행 시 Osaka castle 안내 정보를 미리 숙지하는 것이 시간 낭비를 줄이듯, 유흥 시설 방문도 사전 계획이 실패를 방지합니다. 많은 이용객이 복잡한 예약 과정에서 실수를 범하고 현장에서 당</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0336.html">Osaka castle 안내 체크리스트처럼 확인하는 구글 봇 정밀 검진 및 크롤 버짓 밀착 간호</a>
+        <p class="post-item__summary">Osaka castle 안내 정보를 살피며 동선을 확인하는 여행자처럼, 웹 관리자도 사이트의 상태를 점검해야 합니다. 특히 구글 봇이 효율적으로 웹페이지를 방문하게 만드는 것은 검색 엔진 순위와 직</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0337.html">Osaka castle 안내 및 마포 단체 회식용 대형 룸 노래방 가격 정보 전략</a>
+        <p class="post-item__summary">오사카 여행의 랜드마크인 Osaka castle 안내 정보를 찾아본 경험이 있다면, 낯선 곳에서의 일정이 얼마나 철저한 준비를 요구하는지 잘 알 것입니다. 비즈니스 업무차 마포 지역을 방문한 실무자</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0338.html">Osaka castle 안내 정보만큼 중요한 셔츠룸 사이트 선택 기준</a>
+        <p class="post-item__summary">흔히들 유명 관광지인 Osaka castle 안내 글을 검색하듯 셔츠룸 또한 단순히 홍보성 글만 보고 판단하는 경우가 많습니다. 많은 사람이 업종의 특성상 불투명한 정보가 많을 것이라 오해하지만, </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0339.html">Osaka castle 안내와 결이 다른 마포 홍대 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">많은 분이 관광지인 Osaka castle 안내 글을 검색하며 일정을 계획하듯, 회식 장소 역시 구체적인 충족 조건들을 나열해보는 것부터 시작해야 합니다. 특히 마포 지역은 다양한 인원 구성에 따라</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0340.html">Osaka castle 안내만큼 중요한 합정 셔츠룸 단골들이 뽑은 핫플 매거진</a>
+        <p class="post-item__summary">합정 지역의 밤 문화를 처음 접할 때, 과연 어떤 기준을 가지고 업체를 선정해야 할지 고민해본 적 있으신가요? 관광객들이 Osaka castle 안내 정보를 꼼꼼히 살피며 코스를 짜는 것처럼, 밤 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0341.html">Osaka castle 안내를 통한 구글 신뢰 지수 모발이식 솔루션 분석 및 전략</a>
+        <p class="post-item__summary">오사카 여행의 핵심인 Osaka castle 안내를 살펴보면, 관광객들이 정보를 찾는 방식이 검색 엔진의 알고리즘과 유사하다는 점을 알 수 있습니다. 신뢰도 높은 정보가 상단에 배치될 때 사용자는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0199.html">Osaka castle 안내를 참고한 마곡 유흥 추천정보 예약법</a>
+        <p class="post-item__summary">Osaka castle 안내를 살펴보며 효율적인 정보 습득법을 마곡 유흥 분야에도 적용해 보려 합니다. 많은 분이 예약을 진행하는 과정에서 실패를 경험하는데, 이는 대부분 기본적인 절차를 간과하기 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0200.html">Osaka castle 안내로 본 합정 노래방 추천정보 체크리스트</a>
+        <p class="post-item__summary">Osaka castle 안내 사례에서 보듯 공간의 위치와 접근성은 만족도를 결정짓는 핵심입니다. 합정 노래방을 이용할 때도 마찬가지로 입지 조건과 시설 상태를 꼼꼼히 점검해야 합니다. 실패 없는 장</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
